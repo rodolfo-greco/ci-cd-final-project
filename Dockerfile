@@ -6,7 +6,6 @@ WORKDIR /app
 # Establish dependencies
 COPY requirements.txt .
 RUN python -m pip install -U pip wheel && \
-    pip freeze > requirements.txt && \
     pip install -r requirements.txt
 
 # Copy source files last because they change the most
