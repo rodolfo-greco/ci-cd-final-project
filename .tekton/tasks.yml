@@ -53,9 +53,6 @@ spec:
       script: |
           #!/bin/bash
           set -e
-          echo "start"
           python -m pip install --upgrade pip wheel
-          pip freeze > requirements.txt
-          pip install -e .
           pip install -r requirements.txt
           nosetests $(params.args)
