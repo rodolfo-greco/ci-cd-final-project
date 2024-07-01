@@ -5,7 +5,6 @@ WORKDIR /app
 
 # Establish dependencies
 COPY requirements.txt .
-COPY . .
 RUN python -m pip install -U pip wheel && \
     pip install -r requirements.txt
 
